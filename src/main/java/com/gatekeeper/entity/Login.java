@@ -2,25 +2,50 @@ package com.gatekeeper.entity;
 
 import com.gatekeeper.entity.enums.AuthProvider;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Entity
-@Table(name = "logins")
-@Data
-public class Login {
+@Table(
+        name = "logins",
+        uniqueConstraints = @UniqueConstraint(columnNames = {"domain", "user_name"})
+)
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
+public class Login extends SoftDeletableEntity {
 
-    @Id
-    private UUID id;
+    @Column(nullable = false)
+    private UUID userId;
 
+    @Column(nullable = false)
     private String userName;
+
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String password;
-    private AuthProvider authProvider;
-    private int attempts;
-    private int allowedAttempts;
-    private boolean active;
-    private boolean isDeleted;
-    private boolean contactVerificationRequired;
-    private String deactivationReason;
+
+    @Column(nullable = false)
     private String domain;
+
+    @Enumerated(EnumType.STRING)
+    private AuthProvider authProvider;
+
+    private OffsetDateTime lastLogin;
+
+    @Builder.Default
+    private Integer attempts = 0;
+
+    private Integer allowedAttempts;
+
+    @Builder.Default
+    private Boolean active = true;
+
+    @Column(columnDefinition = "TEXT")
+    private String deactivationReason;
 }
