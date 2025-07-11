@@ -1,6 +1,6 @@
-package com.gatekeeper.entity;
+package com.gatekeeper.entities;
 
-import com.gatekeeper.entity.enums.ContactType;
+import com.gatekeeper.entities.enums.ContactType;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.util.UUID;
