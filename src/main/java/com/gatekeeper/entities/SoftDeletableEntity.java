@@ -1,4 +1,4 @@
-package com.gatekeeper.entity;
+package com.gatekeeper.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;

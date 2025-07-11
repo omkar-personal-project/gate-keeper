@@ -1,9 +1,8 @@
-package com.gatekeeper.entity;
+package com.gatekeeper.entities;
 
-import com.gatekeeper.entity.enums.AuthProvider;
+import com.gatekeeper.entities.enums.AuthProvider;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.OffsetDateTime;
 import java.util.UUID;

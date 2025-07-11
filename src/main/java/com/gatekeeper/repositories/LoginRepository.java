@@ -1,10 +1,9 @@
-package com.gatekeeper.repository;
+package com.gatekeeper.repositories;
 
-import com.gatekeeper.entity.Login;
+import com.gatekeeper.entities.Login;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
