@@ -1,4 +1,4 @@
-package com.gatekeeper.entity.enums;
+package com.gatekeeper.entities.enums;
 
 public enum AuthProvider {
     GOOGLE,
