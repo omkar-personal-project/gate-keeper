@@ -2,8 +2,8 @@ package com.gatekeeper.dtos.responses;
 
 import com.gatekeeper.entities.TokenType;
 
-public class AuthResponse implements IResponseData {
+public class AuthResponse {
     public String accessToken;
     public long expiresIn;
-    public TokenType TokenType;
+    public TokenType tokenType;
 }
