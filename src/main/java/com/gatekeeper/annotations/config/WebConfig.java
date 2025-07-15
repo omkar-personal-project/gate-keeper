@@ -1,4 +1,4 @@
-package com.gatekeeper.config;
+package com.gatekeeper.annotations.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;

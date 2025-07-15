@@ -1,4 +1,4 @@
-package com.gatekeeper.config;
+package com.gatekeeper.annotations.config;
 
 import com.gatekeeper.annotations.ApiVersion;
 import org.springframework.core.annotation.AnnotationUtils;
